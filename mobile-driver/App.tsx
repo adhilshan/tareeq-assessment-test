@@ -8,6 +8,7 @@ import LoginScreen from './src/screens/LoginScreen';
 import RegisterScreen from './src/screens/RegisterScreen';
 import RequestListScreen from './src/screens/RequestListScreen';
 import RequestDetailScreen from './src/screens/RequestDetailScreen';
+import LocationGate from './src/components/LocationGate';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,10 +23,12 @@ function AuthStack() {
 
 function MainStack() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Requests" component={RequestListScreen} />
-      <Stack.Screen name="RequestDetail" component={RequestDetailScreen} />
-    </Stack.Navigator>
+    <LocationGate>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Requests" component={RequestListScreen} />
+        <Stack.Screen name="RequestDetail" component={RequestDetailScreen} />
+      </Stack.Navigator>
+    </LocationGate>
   );
 }
 
