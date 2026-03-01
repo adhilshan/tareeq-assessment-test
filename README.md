@@ -2,6 +2,49 @@
 
 Production-ready full stack towing management monorepo with Laravel backend, React web customer app, and React Native driver app.
 
+## Demo Video
+https://www.loom.com/share/7848a5e396fb4bd3addeb7c4e4220b40
+
+## Links
+### Customer Web App:
+https://web-customer-tareeqk.web.app/
+
+### API Documentation:
+https://adhilshan-project44.azoraads.com/api/documentation
+
+### Mobile App (APK Download):
+https://drive.google.com/file/d/1QLTPSlkq2-HTjZEp_s0ksZmoYdPOAwxS/view?usp=sharing
+
+
+## Tech Stack
+
+### Backend
+- Laravel 11/12
+- MySQL
+- Redis
+- JWT Authentication
+- Laravel Sanctum
+- Laravel Passport
+- Laravel Echo
+- Laravel Reverb
+- Laravel L5-Swagger
+
+### Web Customer App
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- React Router
+- React Leaflet
+- React Native Web
+
+### Mobile Driver App
+- React Native CLI
+- Android
+- Axios
+- React Navigation
+- React Leaflet
+
 ## Structure
 
 ```
