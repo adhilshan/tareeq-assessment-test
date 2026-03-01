@@ -27,7 +27,6 @@ export default function CreateRequest() {
   const [detecting, setDetecting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMapMoving, setIsMapMoving] = useState(false);
-  const [touchStartX, setTouchStartX] = useState(null);
 
   // Stable refs — never change, never trigger re-renders
   const containerRef = useRef(null);   // attached to the map <div>
@@ -198,17 +197,9 @@ export default function CreateRequest() {
     }
   };
 
-  const handleTouchStart = (e) => setTouchStartX(e.touches[0].clientX);
-
-  const handleTouchEnd = (e) => {
-    if (touchStartX == null) return;
-    const deltaX = e.changedTouches[0].clientX - touchStartX;
-    if (deltaX < -60) navigate('/requests');
-    setTouchStartX(null);
-  };
 
   return (
-    <div className="space-y-4" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+    <div className="space-y-4">
       <RequestsTabs active="new" />
       <h1 className="text-2xl font-bold" style={{ color: 'var(--color-text)' }}>Request Tow</h1>
       <Card>
